@@ -1,0 +1,11 @@
+<div class="container mx-auto">
+  <h1 class="text-2xl font-bold mb-4">Lista de Jogos</h1>
+  <a routerLink="/add-game" class="bg-green-500 text-white py-2 px-4 rounded mb-4 inline-block">Cadastrar Novo Jogo</a>
+  <div *ngFor="let game of games" class="game-item mb-6 p-4 border rounded-lg">
+    <img [src]="game.image" alt="{{game.name}}" class="w-24 h-24 mb-4">
+    <h2 class="text-xl font-semibold">{{ game.name }}</h2>
+    <p>{{ game.description }}</p>
+    <p class="text-sm text-gray-600">Dimensões da caixa: {{ formatBoxDimensions(game.boxDimensions) }}</p>
+    <p class="text-lg font-bold">Preço: {{ game.price | currency }}</p>
+  </div>
+</div>

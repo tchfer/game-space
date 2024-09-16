@@ -1,0 +1,12 @@
+/* Estilos para GameListComponent */
+.container {
+  padding: 20px;
+}
+
+img {
+  transition: transform 0.2s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
